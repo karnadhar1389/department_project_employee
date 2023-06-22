@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Detail</title>
+</head>
+<body>
+    <h1>Employee Detail</h1>
+    <ul>
+        <li><strong>Email:</strong> {{ employee.email }}</li>
+        <li><strong>Last Name:</strong> {{ employee.lastname }}</li>
+        <li><strong>First Name:</strong> {{ employee.firstname }}</li>
+        <li><strong>Age:</strong> {{ employee.age }}</li>
+        <li><strong>Department ID:</strong> {{ employee.department_id }}</li>
+    </ul>
+
+    <a href="/employees/{{ employee.email }}/edit">Edit Employee</a>
+</body>
+</html>

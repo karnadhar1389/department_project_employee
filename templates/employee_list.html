@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees Overview</title>
+    <style>
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+    <h1>Employees Overview</h1>
+    <table>
+        <tr>
+            <th>Email</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Age</th>
+            <th>Department ID</th>
+            <th>Edit</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.lastname }}</td>
+            <td>{{ employee.firstname }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.department_id }}</td>
+            <td>
+                <a href="/employees/{{ employee.email }}/edit">Edit</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

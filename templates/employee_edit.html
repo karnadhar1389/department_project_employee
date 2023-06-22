@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Employee</title>
+</head>
+<body>
+    <h1>Edit Employee</h1>
+    <form method="POST" action="/employees/{{ employee.email }}">
+        <label>Email:</label>
+        <input type="text" name="email" value="{{ employee.email }}" readonly><br>
+
+        <label>Last Name:</label>
+        <input type="text" name="lastname" value="{{ employee.lastname }}"><br>
+
+        <label>First Name:</label>
+        <input type="text" name="firstname" value="{{ employee.firstname }}"><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" value="{{ employee.age }}"><br>
+
+        <label>Department ID:</label>
+        <input type="text" name="department_id" value="{{ employee.department_id }}"><br>
+
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Departments Overview</title>
+    <style>
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+    <h1>Departments Overview</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        {% for department in departments %}
+        <tr>
+            <td>{{ department.id }}</td>
+            <td>{{ department.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

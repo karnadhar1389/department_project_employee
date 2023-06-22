@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department Statistics</title>
+    <style>
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+    <h1>Department Statistics</h1>
+    <table>
+        <tr>
+            <th>Department ID</th>
+            <th>Number of Projects</th>
+        </tr>
+        {% for department_id, project_count in department_project_count.items() %}
+        <tr>
+            <td>{{ department_id }}</td>
+            <td>{{ project_count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
